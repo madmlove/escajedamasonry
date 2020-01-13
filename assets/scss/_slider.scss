@@ -1,0 +1,148 @@
+/*
+master slider
+*/
+.title2 {
+    font-size: 4rem;
+    color: #fff;
+    line-height: 1;
+    letter-spacing: 2px;
+    font-weight:300;
+    text-transform: capitalize;
+}
+
+.sub-title2 {
+    color: #fff;
+    font-size: 16px;
+    font-family: $base-font;
+}
+
+.sub-title3 {
+    color: #fff;
+    font-size: 2rem;
+    font-family: $base-font;
+    font-weight: 300;
+    text-transform: capitalize;
+}
+
+.btn1 {
+    @include border-radius(24px);
+    padding: 10px 25px;
+    background-color: $skincolor;
+    color: #fff;
+    cursor: pointer;
+    font-size: 14px;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    font-weight: 400;
+    text-shadow: 0 1px rgba(0, 0, 0, 0.15);
+    @include transition(all 0.3s);
+    font-family:$base-font;
+    &:hover {
+        color: #fff;
+        background-color: $skincolor;
+    }
+    i {
+        margin-left: 5px; 
+        vertical-align: middle;
+        font-size: 16px;
+    }
+}
+.btn2 {
+    @include border-radius(24px);
+    padding: 10px 25px;
+    background-color: transparent;
+    color: #fff;
+    border: 1px solid #fff;
+    cursor: pointer;
+    font-size: 14px;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    font-weight: 400;
+    @include transition(all 0.3s);
+     font-family:$base-font;
+     i {
+        margin-left: 5px;
+        vertical-align: middle;
+        font-size: 16px;
+    }
+    &:hover {
+        color: $darktext;
+        background-color:#fff;
+    }
+}
+
+
+/**carousel service slider**/
+.service-slider{
+    .owl-controls{
+        position: absolute;
+        width: auto;
+        top: 0;
+        margin-top: -50px;
+        right: 0px;
+        .owl-buttons div{
+            @include border-radius(0px);
+            background: transparent;
+            font-size: 35px;
+            color:$skincolor;
+        }
+
+    }
+}
+
+/**tesimonials**/
+.testimonials{
+    background-image: url('../images/pattern.png');
+    background-repeat: repeat;
+    padding: 60px 0;
+    background-color:$darktext;
+    .center-title h2{
+        color:#fff;
+    }
+}
+.testi-slider{
+    padding: 0px 30px;
+    i{
+        color:$skincolor;
+        font-size: 50px;
+        display: block;
+    }
+    p{
+        color:#fff;
+        font-style: normal;
+        margin: 20px 0;
+        font-size: 24px;
+        line-height: 1.7;
+    }
+    h5{
+        color:$skincolor;
+        text-transform: uppercase;
+        font-weight: 700;
+    }
+
+}
+.owl-theme .owl-dots .owl-dot span{
+    width: 6px;
+    height: 6px;
+    background-color: transparent;
+    border: 1px solid $skincolor;
+    @include transition (all .3s);
+}
+.owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span{
+    background-color: $skincolor;
+    @include transform (scale(2));
+}
+.item .service-box{
+    padding: 1.5rem;
+    background-color: #fff;
+    border-radius: 5px;
+    -webkit-border-radius:5px;
+    img{
+        border-radius: 5px;
+        -webkit-border-radius:5px;
+    }
+    .service-desc{
+        padding-top: 1.25rem;
+        padding-bottom: 0px;
+    }
+}

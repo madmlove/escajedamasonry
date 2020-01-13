@@ -1,0 +1,336 @@
+/*
+
+* Bpress - Construction & Architecture Template
+* Version - 1.2.0
+* Author - design_mylife
+* support - mylifedesign143@gmail.com
+* File - Main style css file of Bpress template (Always put it on just before end of <head> tag)
+* Copyright 2019 . All Right Reserved
+*/
+
+
+
+@import url('https://fonts.googleapis.com/css?family=Dosis:300,400,500,600|Open+Sans:300,300i,400,400i,600,700,800');
+@import "_mixins";
+@import "_variables";
+@import "_base";
+@import "_buttons";
+@import "_titles";
+@import "_boxes";
+@import "_cta";
+@import "_topbar";
+@import "_navbar"; 
+@import "_dropdown";
+@import "_form-elements";
+@import "_hero-templates";
+@import "_slider";
+@import "_sidebar";
+@import "_tabs";
+@import "_news";
+@import "_staff";
+@import "_pricing";
+@import "_accordions";
+@import "_breadcrumb";
+@import "_projects";
+@import "_footer";
+
+
+
+/**social**/
+.social{
+    li{
+        padding: 0px;
+        a{
+            margin: 0px 3px;
+            color:$basetext;
+            font-size: 1.75rem;
+            &:hover{
+                color: $skincolor;
+            }
+        }
+    }
+}
+
+/****Responsive css**/
+@media(max-width:991px){
+    .notify-form{
+        max-width: 380px;
+    }
+    .page-coming{
+        .display-3{
+            font-size: 4rem;
+            margin-bottom: 1rem;
+        }
+        ul {
+            margin-bottom: 1.5rem;
+            li{
+                a{
+                    width: 2rem;
+                    height: 2rem;
+                    font-size: 17px;
+                }
+            }
+        }
+        p{
+            font-size: .95rem;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+        .countdown-box{
+            padding: .25rem .5rem;
+            h5{
+                font-size: 1.5rem;
+            }
+        }
+    }
+    .facts-row{
+        .my-3{
+            margin-top: .75rem!important;
+            margin-bottom: .75rem!important;
+        }
+        .display-4{
+            font-size: 1.5rem;
+        }
+        .display-3{
+            font-size: 2rem;
+        }
+    }
+    .navbar .navbar-nav .nav-link > i {
+        font-size: 24px;
+        width: 3rem;
+        height: 3rem;
+        border-radius: 100px;
+        right: 0;
+    }
+    .navbar.navbar-light .navbar-nav .nav-link > i{
+        background-color: $defaultcolor;
+    }
+    .navbar.navbar-dark .navbar-nav .nav-link > i{
+        background-color: $skincolor;
+    }
+    .search-toggle{
+        position: relative;
+    }
+    .search-form{
+        left: calc(0px + 60px);
+        right: auto;
+        width:90%;
+    }
+    .nav.navbar-nav{
+        position:static;
+    }
+    .error-404-page{
+        .display-1{
+            font-size: 2rem;
+        }
+        .lead{
+            font-size: 13px;
+            font-weight: 400;
+        }
+    }
+    .top-bar{
+        display: none;
+    }
+    .navbar-expand-lg>.container, .navbar-expand-lg>.container-fluid{
+        position: relative;
+    }
+    .navbar-toggler{
+        position: absolute;
+        right: 0;
+        top: 10px;
+        padding: 0px;
+        border: 0px;
+    }
+    .hero-banner .hero-overlay .hero-inner .hero-content h1{
+        font-size: 30px;
+        line-height: 30px;
+    }
+    .hero-banner .hero-overlay .hero-inner .hero-content{
+        p{
+            font-size: 13px;
+            line-height: 22px;
+        }
+    }
+    .hero-banner .hero-overlay .hero-inner .hero-content .btn-xl{
+        padding: 6px 12px;
+    }
+    .top-bar .text-right{
+        text-align: left;
+        margin-top: 20px;
+    }
+    .cta{
+        text-align: center;
+    }
+    .space100{
+        height: 70px;
+    }
+    .landing-hero{
+        margin-top:49px;
+    }
+    body.one-page .navbar-transparent{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 999;
+        background-color: $darkcolor!important;
+        min-height: 58px;
+    }
+    body.one-page{
+        padding-top: 58px;
+    }
+    .hero-parallax .hero-inner .hero-content h2{
+        font-size: 1.5rem;
+    }
+    .btn-lg {
+        padding: 10px 25px;
+        font-size: 13px;
+    }
+    .dropdown-menu{
+        border: 0px;
+        box-shadow: none;
+    }
+    .dropdown-menu > .dropdown-item,.dropdown-menu > li > a{
+        border-bottom: 0px!important;
+    }
+    .dropdown-submenu {
+        .dropdown-menu{
+            padding-left: .75rem;
+            display: block;
+        }
+    }
+    .page-title h2{
+        font-size: 20px;
+    }
+    .navbar-light .navbar-toggler-icon,.navbar-dark .navbar-toggler-icon{
+        background-image: none;
+        &:before{
+            font-family: "Ionicons";
+            content: "\f1c3";
+            font-size: 32px;
+            color: $skincolor;
+        }
+    }
+    [aria-expanded="true"]{
+        .navbar-toggler-icon:before{
+            content: "\f406";
+        }
+    }
+    .cta h3,h3 {
+        font-size: 24px;
+    }
+    .footer{
+        .list-inline{
+            text-align: center;
+        }
+        .text-right{
+            text-align: center!important;
+        }
+    }
+    .c_info_bar h4{
+        font-size: 18px;
+    }
+}
+@media(max-width:767px){
+    .display-3{
+        font-size: 3rem;
+    }
+    .center-it{
+        p.mb-5{
+            margin-bottom: 1rem!important;
+        }
+        p.mt-4{
+            margin-top: .5rem!important;
+        }
+    }
+    .notify-form{
+        max-width: 300px;
+        h3{
+            font-size: 1.25rem;
+        }
+        .btn{
+            display: block;
+            width: 100%;
+        }
+    }
+    .page-coming{
+        
+        img{
+            width: 90px;
+            margin-bottom: .5rem;
+        }
+        .display-3{
+            font-size: 3rem;
+            margin-bottom: .75rem;
+        }
+        ul {
+            margin-bottom: 1.5rem;
+            li{
+                a{
+                    width: 2rem;
+                    height: 2rem;
+                    font-size: 17px;
+                }
+            }
+        }
+        p{
+            font-size: .95rem;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+        .countdown-box{
+            padding:0px;
+            border: 0px;
+            background-color: transparent;
+            >div{
+               padding: 0 .65rem;
+               border: 0px;
+            }
+        }
+    }
+    .cta h3,h3,.h3 {
+        font-size: 20px;
+    }
+    .btn-xl {
+        padding: 12px 20px;
+    }
+    .h1, h1 {
+        font-size: 28px;
+    } 
+    .h4, h4,.card-list li a h4,.testi-slider p {
+        font-size: 16px;
+    }    
+    .h2, h2 {
+        font-size: 24px;
+    }  
+    .border-width{
+        height: 2px;
+        margin: 15px 0;
+    }  
+    .center-title .border-width{
+        margin: 20px auto;
+    }
+    .cbp-l-filters-text .cbp-filter-item{
+        padding: 0px 5px;
+    }
+
+}
+
+@media(max-width:576px){
+    .search-form{
+        width: 85%;
+    }
+    .page-coming{
+        .display-3{
+            font-size: 2rem;
+            margin-bottom: 0px;
+        }
+        img{
+            width: 90px;
+            margin-bottom: 1rem;
+        }
+        p{
+            font-size: .85rem;
+        }
+    }
+}

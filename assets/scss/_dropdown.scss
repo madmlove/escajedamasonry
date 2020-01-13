@@ -1,0 +1,218 @@
+/*
+Dropdown css
+*/
+.dropdown-menu{
+    @include box-shadow(0px 8px 8px rgba($darkcolor,.15));
+   min-width: 190px;
+    background-color:#fff;
+    margin: 0px;
+    @include border-radius(0px);
+    padding:0px;
+    min-width:210px;
+    border:0px;
+    .dropdown-item,>li>a{
+        padding: .5rem 1.25rem;
+        font-size: 14px;
+        font-weight: 300;
+        text-transform: capitalize;
+        font-family: $base-font;
+        color:$basetext;
+        &:hover,&:focus,&:active{
+            color:$skincolor;
+            background-color: $defaultcolor;
+        }
+    }
+    >li:last-child a{
+        border-bottom: 0px;
+    }
+}
+.dropdown-item.active, .dropdown-item:active{
+  background-color: $defaultcolor;
+  color: $skincolor;
+}
+/**search form**/
+.search-toggle{
+  position: static;
+  .nav-link.show>i:before{
+    content: "\f406";
+    font-size: 32px;
+  }
+}
+.nav.navbar-nav{
+  position: relative;
+}
+.search-form{
+  position: absolute;
+  right: calc(0px + 40px);
+  width: 100%;
+  top: 5%;
+  height: 90%;
+  padding: 0;
+  opacity: 0;
+  visibility: hidden;
+  z-index:9;
+  @include transition(all .5s);
+  animation: fadeOutUp .5s;
+    -webkit-animation: fadeOutUp .5s;
+  .form-control{
+      height: 90%;
+      position: absolute;
+      width: 100%;
+      top: 5%;
+      left: 0;
+  }
+  &.show{
+    animation: fadeInUp .5s;
+    -webkit-animation: fadeInUp .5s;
+    opacity: 1;
+    visibility: visible;
+  }
+}
+/**third level menu**/
+.dropdown-submenu {
+    position: relative;
+   
+}
+
+.dropdown-submenu>.dropdown-menu {
+    top: 0;
+    left: 100%;
+    margin-top: -6px;
+    margin-left: -1px;
+  @include border-radius(0px);
+}
+
+.dropdown-submenu:hover>.dropdown-menu {
+    display: block;
+}
+
+
+.dropdown-submenu.pull-left {
+    float: none;
+}
+
+.dropdown-submenu.pull-left>.dropdown-menu {
+    left: -100%;
+    margin-left: 10px;
+    -webkit-border-radius: 6px 0 6px 6px;
+    -moz-border-radius: 6px 0 6px 6px;
+    border-radius: 6px 0 6px 6px;
+}
+
+/******************
+
+MULTI LEVEL DROPDOWN CSS
+
+*********************/
+.dropdown-submenu {
+  position: relative;
+}
+
+.dropdown-submenu > .dropdown-menu {
+  top: -2px;
+  left: 100%;
+  margin-top: 0px;
+  margin-left: 0px;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  -ms-border-radius: 0px;
+  border-radius: 0px;
+}
+
+.dropdown-submenu:hover > .dropdown-menu {
+  display: block;
+}
+
+.dropdown-submenu > a:after {
+  top: 9px;
+  right: 15px;
+  font-size: 11px;
+      content: "\f3d1";
+  position: absolute;
+  font-weight: normal;
+  display: inline-block;
+  font-family: "IonIcons";
+}
+
+.dropdown-submenu.pull-left {
+  float: none;
+}
+
+.dropdown-submenu.pull-left > .dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  -ms-border-radius: 0px;
+  border-radius: 0px;
+}
+
+
+
+
+
+/* Mega Menu */
+.dropdown.dropdown-mega{
+  position: static;
+}
+.dropdown-menu.dropdown-menu-mega{
+  width: 100%;
+  h5{
+    font-size: 16px;
+    position: relative;
+    padding-bottom: .5rem;
+    padding-top: 1.25rem;
+    margin-bottom: 10px;
+    &:after{
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 16px;
+      height: 2px;
+      @include border-radius(100px);
+      background-color: $skincolor;
+    }
+  }
+}
+
+@media(min-width:992px){
+  .dropdown-menu.dropdown-menu-mega{
+    .dropdown-item{
+      padding: 0px;
+      line-height: 2.25rem;
+      &:hover,&:focus{
+        background-color: transparent;
+      }
+    }
+    .flex-column{
+      display: flex;
+      height: 100%;
+    }
+  }
+  .dropdown-menu.dropdown-menu-mega .col-lg-4:nth-child(2){
+    background-color: rgba($defaultcolor,.15);
+    border-right:1px solid rgba($defaultcolor,.5);
+    border-left:1px solid rgba($defaultcolor,.5);
+  }
+  .dropdown-menu{
+    display: block;
+    opacity: 0;
+    visibility: hidden;
+    @include transition(all .3s);
+    @include transform(translateY(10px));
+  }
+  .dropdown-menu.show{
+    opacity: 1;
+    visibility: visible;
+    @include transform(translateY(0px));
+  }
+  .dropdown-submenu>.dropdown-menu{
+    @include transform(translateX(-10px));
+  }
+  .dropdown-submenu:hover>.dropdown-menu{
+    @include transform(translateX(0px));
+    opacity: 1;
+    visibility: visible;
+  }
+}

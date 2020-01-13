@@ -1,0 +1,33 @@
+/*
+Staff
+*/
+
+.person-col{
+    max-width:500px;
+     margin: 0 auto;
+        display: block;
+        border: 1px solid $defaultcolor;
+    h4{
+        margin-bottom: 0px;
+        font-size: 1.25rem;
+    }
+    img{
+        border-radius: 5px;
+        border-bottom: 1px solid $defaultcolor;
+    }
+    span{
+        color:$skincolor;
+        display: block;
+        margin-bottom: 10px;
+        font-size: 12px;
+        em{
+            font-style: normal;
+        }
+    }
+    .person-desc{
+        padding:1.5rem;
+        p{
+            margin-bottom: 0px;
+        }
+    }
+}

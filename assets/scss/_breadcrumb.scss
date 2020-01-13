@@ -1,0 +1,15 @@
+/*
+Breadcrumb style
+*/
+
+.page-title{
+    h2{
+        margin: 0px;
+        text-transform: capitalize;
+        font-size: 1.75rem;
+        color: #fff;
+        letter-spacing: 2px;
+        font-weight: 300;
+        font-family: $base-font;
+    }
+}

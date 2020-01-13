@@ -1,0 +1,241 @@
+/*
+Buttons style
+*/
+.buttons{
+    a{
+        margin: 5px;
+    }
+}
+.btn{ 
+    font-weight: 600;
+    text-transform: capitalize;
+    font-size: 12px;
+    letter-spacing: 0px;
+    padding: 7px 20px;
+    @include border-radius(3px);
+    font-family:$base-font;
+    i{
+        margin-left: 8px;
+        font-size: 16px;
+        top: 2px;
+        line-height: 1;
+        position: relative;
+    }
+    &.btn-radius{
+        border-radius: 100px;
+        -webkit-border-radius:100px;
+    }
+}
+.btn-lg{
+    padding: 11px 30px;
+    font-size: 13px;
+    i{
+        margin-left: 12px;
+        font-size: 18px;
+        top: 2px;
+        line-height: 1;
+        position: relative;
+    }
+}
+.btn-xl{
+    padding: 13px 40px;
+    font-size: 14px;
+    >i{
+        font-size: 21px;
+        position: relative;
+        vertical-align: top;
+        line-height: 1;
+        top: 1px;
+    }
+}
+.btn-xs{
+    padding: 3px 10px;
+    font-size: 10px;
+}
+.btn-link{
+    color:$skincolor;
+    &:hover{
+        color:$basetext;
+    }
+}
+.btn-default{
+    background-color: $defaultcolor;
+    color:$basetext;
+    border-color: $default-active;
+    &:hover{
+        background-color: $default-active;
+        color:$darktext;
+    }
+    &.focus,&:focus,&:not(:disabled):not(.disabled):active:focus{
+        box-shadow: 0px 9px 20px -5px rgba($darkcolor, 0.05);
+        border-color: $default-active;
+        background-color: $default-active;
+    }
+    &:not(:disabled):not(.disabled):active{
+        background-color: $skinactive;
+        border-color: $default-active;
+    }
+}
+.btn-skin,.btn-primary{
+    background-color:$skincolor;
+    color:#fff;
+    border-color: $skinactive;
+    &:hover{
+        background-color: $skinactive;
+        border-color: $skinactive;
+        color:#fff;
+    }
+    &.focus,&:focus,&:not(:disabled):not(.disabled):active:focus{
+        box-shadow: 0px 9px 20px -5px rgba($skincolor, 0.35);
+        border-color: $skinactive;
+    }
+    &:not(:disabled):not(.disabled):active{
+        background-color: $skinactive;
+        border-color: $skinactive;
+    }
+}
+.btn-dark{
+    background-color:$darkcolor;
+    text-shadow: 0 1px rgba($darkcolor, 0.15);
+    color:#fff;
+    border-color: $darkactive;
+    &:hover{
+        background-color: $darkactive;
+        border-color: $darkactive;
+        color:#fff;
+    }
+    &.focus,&:focus,&:not(:disabled):not(.disabled):active:focus{
+        box-shadow: 0px 9px 20px -5px rgba($darkcolor, 0.35);
+        border-color: $darkactive;
+    }
+    &:not(:disabled):not(.disabled):active{
+        background-color: $darkactive;
+        border-color: $darkactive;
+    }
+}
+.btn-secondary{
+    background-color:$secondarycolor;
+    text-shadow: 0 1px rgba($secondarycolor, 0.15);
+    color:$basetext;
+    border-color: $secondaryactive;
+    &:hover{
+        background-color: $secondaryactive;
+        border-color: $secondaryactive;
+        color:$darktext;
+    }
+    &.focus,&:focus,&:not(:disabled):not(.disabled):active:focus{
+        box-shadow: 0px 9px 20px -5px rgba($secondarycolor, 0.35);
+        border-color: $secondaryactive;
+        color:$darktext;
+    }
+    &:not(:disabled):not(.disabled):active{
+        background-color: $secondaryactive;
+        border-color: $secondaryactive;
+        color:$darktext;
+    }
+}
+.btn-white{
+    background-color:#fff;
+    color:$darktext;
+    &:hover{
+        background-color: $defaultcolor;
+        color:$darktext;
+    }
+    &.focus,&:focus,&:not(:disabled):not(.disabled):active:focus{
+        box-shadow: 0px 9px 20px -5px rgba($darkcolor, 0.15);
+        border-color: $defaultcolor;
+    }
+    &:not(:disabled):not(.disabled):active{
+        background-color: $defaultcolor;
+        border-color: $default-active;
+    }
+}
+.btn-border-dark,.btn-outline-dark{
+    border: 1px solid $darkcolor;
+    background-color: transparent;
+    color:$darkcolor;
+    &:hover{
+        color:#fff;
+        background-color: $darkcolor;
+    }
+    &.focus,&:focus,&:not(:disabled):not(.disabled):active:focus{
+        box-shadow: 0px 9px 20px -5px rgba($darkcolor, 0.35);
+        border-color: $darkcolor;
+    }
+    &:not(:disabled):not(.disabled):active{
+        background-color: $darkcolor;
+        border-color: $darkcolor;
+    }
+}
+.btn-outline-secondary{
+    border: 1px solid $secondarycolor;
+    background-color: transparent;
+    color:$basetext;
+    &:hover{
+        color:$darktext;
+        background-color: $secondarycolor;
+        border-color: $secondarycolor;
+    }
+    &.focus,&:focus,&:not(:disabled):not(.disabled):active:focus{
+        box-shadow: 0px 9px 20px -5px rgba($secondarycolor, 0.35);
+        border-color: $secondarycolor;
+        color:$darktext;
+    }
+    &:not(:disabled):not(.disabled):active{
+        color:$darktext;
+        background-color: $secondarycolor;
+        border-color: $secondarycolor;
+    }
+}
+.btn-border-default,.btn-outline-default{
+    border: 1px solid $defaultcolor;
+    background-color: transparent;
+    color:$basetext;
+    &:hover{
+        color:$basetext;
+        background-color: $defaultcolor;
+        border-color: $default-active;
+    }
+    &.focus,&:focus,&:not(:disabled):not(.disabled):active:focus{
+        box-shadow: 0px 9px 20px -5px rgba($darkcolor, 0.15);
+        border-color: $default-active;
+    }
+    &:not(:disabled):not(.disabled):active{
+        background-color: $defaultcolor;
+        border-color: $default-active;
+    }
+}
+.btn-border-skin,.btn-outline-primary{
+    border: 1px solid $skincolor;
+    background-color: transparent;
+    color:$skincolor;
+    &:hover{
+        color:#fff;
+        border-color: $skincolor;
+        background-color: $skincolor;
+    }
+    &.focus,&:focus,&:not(:disabled):not(.disabled):active:focus{
+        box-shadow:0px 9px 20px -5px rgba($skincolor, 0.35);
+        border-color: $skincolor;
+    }
+    &:not(:disabled):not(.disabled):active{
+        background-color: $skincolor;
+        border-color: $skinactive;
+    }
+}
+.btn-border-white{
+    border: 1px solid #fff;
+    background-color: transparent;
+    color:#fff;
+    &:hover{
+        color:$darktext;
+        background-color: #fff;
+    }
+}
+
+
+.btn-danger,.btn-info,.btn-warning,.btn-success,.btn-outline-success,.btn-outline-info,.btn-outline-danger,.btn-outline-warning{
+    &.focus,&:focus,&:not(:disabled):not(.disabled):active:focus{
+        box-shadow:0px 9px 20px -5px rgba($darkcolor, 0.15);
+    }
+}

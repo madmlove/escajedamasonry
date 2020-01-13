@@ -1,0 +1,131 @@
+/*Hero Templates*/
+.hero-parallax{
+    position: relative;
+    overflow: hidden;
+    height:100%;
+    .hero-inner{
+        width: 100%;
+        height: 100%;
+        display: table;
+        position: relative;
+        .hero-content{
+            width: 100%;
+            height: 100%;
+            display: table-cell;
+            vertical-align: middle;
+            h2{
+                color:#fff;
+                font-weight: 400;
+                margin-bottom: 1rem;
+                font-size: 3.5rem;
+                line-height: 1.5;
+                text-transform: capitalize;
+                letter-spacing: 2px;
+            }
+            p{
+                color:#fff;
+                text-transform: capitalize;
+                font-size: 16px;
+                margin-bottom: 1.5rem;
+            }
+        }
+    }
+}
+
+.intro-ytp{
+height: 100%;
+.hero-parallax{
+    position: relative;
+    &:before{
+        background-color: rgba($darkcolor,.65);
+    background-image: url('../images/video-fallback.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    z-index:-1;
+    content: "";
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    }
+}
+}
+.page-coming{
+    height: 100%;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    .youtube-overlay{
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-image:url('../images/video-fallback.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-color: rgba($darkcolor,.75);
+    }
+    .coming-text{
+        font-family: 'Annie Use Your Telescope', cursive;
+        font-weight: 400;
+    }
+    p{
+        font-size: 1.25rem;
+        margin: 1.5rem 0;
+    }
+    ul{
+        margin-bottom: 2rem;
+        padding-top: 1.5rem;
+        li{
+            a{
+                font-size: 21px;
+                color: #fff;
+                display: flex;
+                width: 2.5rem;
+                height: 2.5rem;
+                align-items: center;
+                justify-content: center;
+                line-height: 1;
+                border: 1px solid rgba(#fff,.25);
+                border-radius: 100px;
+                &:hover{
+                    color: $skincolor;
+                    border-color: $skincolor;
+                    @include transform(translateY(-5px));
+                }
+            }
+        }
+    }
+}
+/* countdown boxes */
+
+.countdown-box{
+    >div{
+        display: inline-block;
+        padding: .75rem 1.25rem;
+        margin-left: .25rem;
+        border:1px solid rgba(#fff,.25);
+        text-align:center;
+        @include border-radius(50px);
+        h5{
+            font-family: $base-font;
+            margin-bottom: 0;
+            font-size:1.75rem;
+            line-height: 1;
+            color: #fff;
+            font-weight:400;
+        }
+        span{
+            font-size: 11px;
+            line-height: 1;
+            display: block;
+            margin-top: .25rem;
+            opacity: .65;
+            text-transform: capitalize;
+        }
+    }
+    }

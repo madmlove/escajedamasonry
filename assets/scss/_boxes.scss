@@ -1,0 +1,167 @@
+/*
+card boxes
+*/
+
+.service-box{
+    .service-thumb{
+        position: relative;
+        img{
+            @include transition(all .3s);
+        }
+        &:hover{
+            img{
+                @include transform(scale(.95));
+                @include  box-shadow (0px 0px 20px rgba($darkcolor,.08));
+            }
+        }
+    }
+    .service-desc{
+        padding: 1.5rem 0;
+        .border-width{
+            margin: 5px 0;
+        }
+        p{
+            margin-top: 10px;
+            margin-bottom: 1.5rem;
+        }
+        h4{
+             margin-bottom:.5rem;
+             font-size: 18px;
+             font-weight: 500;
+        }
+        .border-width{
+            margin-bottom: 1.25rem;
+        }
+    }
+}
+
+.icon-box{
+    .border-width{
+        margin: 0px;
+        margin-bottom: 10px;
+    }
+    i{
+        color:  $skincolor;
+        float: left;
+        margin-right: 20px;
+        width: 70px;
+        height: 70px;
+        line-height: 70px;
+        @include border-radius(50%);
+        border: 1px solid $skincolor;
+        display: block;
+        text-align: center;
+        &:before{
+            margin-left: 0px;
+            font-size: 40px;
+        }
+    }
+    .content{
+        overflow: hidden;
+        text-align: left;
+        h4{
+            font-size: 18px;
+             font-weight: 500;
+        }
+        p{
+            margin-bottom: 0px;
+        }
+    }
+}
+
+.support-info{
+    .col-lg-4{
+        text-align: center;
+        margin-top: 30px;
+    }
+    h4{
+        font-size: 1rem;
+        font-weight: 400;
+        letter-spacing: 1px;
+        font-family: $base-font;
+    }
+    i{
+        color: $basetext;
+        width: 5rem;
+        height: 5rem;
+        border-radius: 100px;
+        border: 1px solid $defaultcolor;
+        margin-bottom: 20px;
+        font-size: 3rem;
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+
+
+
+/* login register page */
+.account-box{
+    border: 1px solid $defaultcolor;
+    border-radius: 5px;
+    .nav.nav-tabs li{
+        margin-right: 0px;
+        &:last-child .nav-link{
+            border-right: 0px;
+        }
+    }
+    p{
+        font-size: 12px;
+        font-weight: 400;
+    }
+    .nav.nav-tabs{
+        border: 0px;
+       .nav-item .nav-link{
+            padding: .75rem 1rem;
+            border:0px;
+            border-right: 1px solid $defaultcolor;
+            border-bottom: 1px solid $defaultcolor;
+            background-color: rgba($defaultcolor,.25);
+            color: $basetext;
+            &.active{
+                background-color: transparent;
+                color: $skincolor;
+                border-bottom-color: transparent;
+            }
+            small{
+                opacity: .65;
+                display: block;
+                line-height: 1;
+            }
+        }
+    }
+    .tab-content{
+        border: 0px;
+        padding: 1.5rem;
+    }
+}
+.form-icon-group{
+    position: relative;
+    overflow: hidden;
+    .ion{
+        position: absolute;
+        left: 5px;
+        top: 10px;
+        width: 40px;
+        height: 30px;
+        line-height: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 24px;
+        opacity: .5;
+        border-right: 1px solid $defaultcolor;
+    }
+    .form-control{
+        height: 50px;
+        padding-left: 60px;
+    }
+}
+
+
+
+
