@@ -16,7 +16,7 @@ $('.b-contact').submit(function() {
 		
 		$.ajax({ // Send an offer process with AJAX
 			type: 'POST',
-			url: 'http://bootstraplovers.com/bootstrap4/bpress-v2.1/app/assets/plugins/contact_form/process-contact.php',
+			url: '/assets/plugins/contact_form/process-contact.php',
 			data: submitData + '&action=add',
 			dataType: 'html',
 			success: function(msg){
